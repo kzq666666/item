@@ -10,7 +10,10 @@ export default new Router({
     {
       path:'/',
       name:'main',
-      component:main
+      component:main,
+      children:[
+        
+      ]
     },
     {
       path:'/historyStock/:abiid',

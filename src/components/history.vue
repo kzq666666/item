@@ -33,7 +33,7 @@
         data () {
             return {
                 data:null,
-                MainName:this.$route.query.MainName
+                MainName:null
             }
         },
         methods:{
@@ -42,10 +42,12 @@
             }
         },
         created() {
+            console.log("http://127.0.0.1:8080/api/history/"+this.$route.params.abiid)
             this.$http.get("http://127.0.0.1:8080/api/history/"+this.$route.params.abiid).then(
                 (res) =>{
-                    this.data = res.data.data
-                    console.log(this.data)
+                    this.MainName = this.$route.query.MainName;
+                    this.data = res.data.data;
+                    // console.log(this.data)
                 }
             )
         },

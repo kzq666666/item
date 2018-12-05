@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Header></Header>
-    <keep-alive>
+    <transition name="el-fade-in-linear">
       <router-view></router-view>
-    </keep-alive>
+    </transition>
     
   </div>
 </template>
@@ -24,6 +24,7 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   }
 
   html,body,#app{
